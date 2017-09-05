@@ -3,10 +3,13 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require('path');
 
 module.exports = {
-  entry: './src/hello.js',
+  entry: {
+    hello: './src/hello.js',
+    contact: './src/contact.js'
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: 'hello.bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -21,7 +24,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader" 
+        loader: "babel-loader"
       }
     ]
   },
@@ -32,12 +35,21 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Demo! Lalal',
+      title: 'Proyecto Demo',
       // minify: {
       //   collapseWhitespace: true
       // },
       hash: true,
-      template: './src/index.ejs', // Load a custom template (ejs by default see the FAQ for details)
+      //filename: './../index.html',
+      template: './src/index.ejs',
+      excludeChunks: ['contact']
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Contacto',
+      hash: true,
+      filename: 'contact.html',
+      template: './src/contact.html',
+      chunks: ['contact']
     }),
     new ExtractTextPlugin({
       filename: "main.css",

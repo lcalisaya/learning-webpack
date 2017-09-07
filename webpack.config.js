@@ -31,6 +31,13 @@ module.exports = {
       {
         include: /\.pug/,
         loader: ['raw-loader', 'pug-html-loader']
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          "file-loader?name=images/[name].[ext]",
+          'image-webpack-loader'
+        ]
       }
     ]
   },
@@ -43,7 +50,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Proyecto Demo',
-      template: './src/index.pug',
+      template: './src/index.html',
       hash: true
     }),
     new ExtractTextPlugin({

@@ -18,3 +18,5 @@ Las dependencias instaladas y configuradas tienen las siguientes finalidades:
 - **react, react-dom y babel**: Para construir una app con React.
 - **rimraf**: Limpia la carpeta 'dist' y regenera los archivos de mencionada carpeta.
 - **pug y pug-html-loader**: Se escribe contenido para plantillas que luego se traducirán en HTML.
+- **cross-env**: Habilita el uso de la constante NODE_ENV.
+- **file-loader e image-webpack-loader**: Carga imágenes en distintos formatos y las optimiza para Producción.

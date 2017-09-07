@@ -1,8 +1,8 @@
 README.md
 
-# Videos tutoriales -> "Learning Webpack 2 from the scratch!"
+# Videos tutoriales -> "Learning Webpack 2 from scratch!"
 
-## Canal de Youtube: Ihatetomatoes
+## Canal de Youtube: [Ihatetomatoes](https://www.youtube.com/watch?v=JdGnYNtuEtE&t=5s)
 ## Profesor: Petr Tichy.
 
 ### Descripción:

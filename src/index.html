@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Webpack 2 con imágenes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webpack 2 y Twitter Bootstrap</title>
 </head>
+
 <body>
-  <h1>Webpack 2 con imágenes</h1>
-  <h2>¿Cómo configurar Webpack2 para usar imágenes desde nuestro template o nuestro CSS?</h2>
-  <div id="root"></div>
-  <img src="<%= require('./images/sample.svg') %>" alt="Logo HTML5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p><img class="img-responsive" src=<%=require("./images/twitter-bootstrap.png") %> /></p>
+            </div>
+            <div class="col-md-8">
+                <h1>Webpack 2 y Twitter Bootstrap</h1>
+                <h2>¿Cómo configurar Webpack 2 y cargar el scss de Twitter Bootstrap y Javascript?</h2>
+                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Launch demo modal
+                    </button>
+
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Dropdown
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Acción</a></li>
+                        <li><a href="#">Otra acción</a></li>
+                        <li><a href="#">Algo más aquí</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Enlace separado</a></li>
+                    </ul>
+                </div>
+
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Título modal</h4>
+                            </div>
+                            <div class="modal-body">
+                                <p>Algún texto aquí.</p>
+                                <!-- <img src="<%= require('./images/sample.svg') %>" alt="Lapicero!"> -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar los cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

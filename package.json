@@ -29,6 +29,8 @@
     "node-sass": "^4.5.3",
     "pug": "^2.0.0-rc.3",
     "pug-html-loader": "^1.1.5",
+    "purify-css": "^1.2.5",
+    "purifycss-webpack": "^0.7.0",
     "raw-loader": "^0.5.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
